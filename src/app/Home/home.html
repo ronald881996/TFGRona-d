@@ -1,0 +1,81 @@
+
+<div class="container">
+    <div class="row">
+         <div class="col-sm-12" style="text-align: center; font-weight: bold; min-height: 50px; background-color:#FFB233;">
+            <div  style="text-align: center; font-weight: bold;background-color:#FFB233;margin:12px">
+                TRANSFORMACÓN DE TEXTO A REPRESENTACIÓN GRÁFICA
+            </div>
+         </div>
+    </div>
+ 
+  <div class="row">
+    
+    <div class="col-sm-6" style="background-color:#FFB233;">
+      <div class="form-group" align="center">
+        <label align="center" style="font-weight: bold;">Introduce texto correctamente clasificado en formato JSON</label>
+        <textarea [(ngModel)]="texto"  (ngModelChange)="IsJsonString($event)" placeholder='El siguiente JSON es un ejemplo:
+        {"Sujeto":{
+            "N":"Perro",
+            "Det":["El"],
+            "Adj":"Negro"
+    },
+        "Predicado":{
+            "V":"sale",
+                "CCL":{
+                    "E":"de",
+                    "TSN":{
+                        "N":"casa"
+                  }
+              }  
+    }}' style="min-height: 300px; min-width: 200px " class="form-control"></textarea>
+        <br>
+        <span *ngIf="!jsonIncorrecto" style="color: #ed1b24">JSON incorecto</span> <br>
+        <button class="btn btn-info" (click)="cajaNegra(texto)"  [disabled]="!jsonIncorrecto">Crear diagrama</button>
+    </div>
+    </div>
+    <div class="col-sm-6" style="background-color:#FFB233;">
+       <div id="leyenda" class="form-group">
+            <label style="font-weight: bold;">Leyenda</label>
+            <div>
+                <ul class="list-unstyled"><b>Complementos del Sujeto:</b>
+                    <li><b>N</b> (Nombre o Nucleo)</li>
+                    <li><b>SP</b> (Sintagma Preposicional)</li>
+                    <li><b>Det</b> (Determinante)*</li>
+                    <li><b>Adj</b> (Adjetivo)</li>
+                    <li *ngIf="!show"><b><p >...</p></b></li>
+                </ul>
+                
+                <ul class="list-unstyled" *ngIf="show"><b>Complementos del Predicado:</b>
+                    <li ><b>V</b> (Verbo)</li>
+                    <li ><b>CCT</b> (Complemento Circustacial de Tiempo)</li>
+                    <li><b>CCL</b> (Complemento Circustacial de Lugar)</li>
+                    <li><b>CCM</b> (Complemento Circustacial de Modo)</li>
+                    <li><b>CCCC</b> (Complemento Circustacial de Compañía)</li>
+                    <li><b>CCC</b> (Complemento Circustacial de Cantidad)</li>
+                    <li ><b>CCInst</b> (Complemento Circustacial de Instrumento)</li>
+                    <li><b>CCF</b> (Complemento Circustancial de Finalidad)</li>
+                    <li><b>CCau</b> (Complemento Circustancial de Causa)</li>
+                    <li><b>CD</b> (Complemento Directo)</li>
+                    <li><b>CI</b> (Complemento Indirecto)*</li>
+                    <li><b>CP</b> (Complemento Predicativo)</li>
+                    <li><b>ATR</b> (Atributo)</li>
+                </ul>
+                 <ul class="list-unstyled" *ngIf="show"><b>Complementos de lo Complementos:</b>
+                    <li ><b>E</b> (Enlace)</li>
+                    <li ><b>TSN</b> (Termino Sintagma Nominal)</li>
+                </ul>
+             <p *ngIf="show">*Estos elementos seran una array en el caso de determinantes se pondran en orden en el que aparezcan en el sujeto y en el caso del complemento indirecto se podran primero el CI "le" si este aparece en la oracion en caso contrario es indiferente el orden (ej: "CI":["le","a carlos"] ó "Det":["El","otro"])</p>   
+            </div>
+             <button class="btn btn-info" (click)="show = !show; showMore();">{{showText}}</button>
+        </div>
+    </div>
+  </div>
+  <div class="row">
+       <div class="col-sm-12" style="background-color:#FFB233; align-content: center;">
+        
+         <div align="center" id="myDiagramDiv" style="width:900px; height:400px; text-align: center;">{{myDiagramDiv}}</div>
+       </div>
+  </div>
+</div>
+
+   

@@ -1,0 +1,330 @@
+
+/////////////////////////////////////////////////////////Repositorio bueno//////////////////////////////////////////////////////////////////
+
+1. Las personas trabajan en empresas
+{
+	"Sujeto":{
+		"Det":["Las"],
+        "N":"personas"
+    },
+    "Predicado":{
+        "V":"trabajan",
+        "CCL":"en empresas"  
+    }
+}
+
+2. Las personas viven en ciudades
+
+{
+	"Sujeto":{
+		"Det":["Las"],
+        "N":"personas"
+    },
+    "Predicado":{
+        "V":"viven",
+        "CCL":"en ciudades"  
+    }
+}
+3. Los peces viven en el mar
+{
+	"Sujeto":{
+		"Det":["Los"],
+		"N":"peces"
+	},
+	"Predicado":{
+		"V":"viven",
+		"CCL":"en el mar"
+	}
+}
+
+4. Los elefantes son seres vivos
+{
+	"Sujeto":{
+		"Det":["Los"],
+		"N":"elefantes"
+	},
+	"Predicado":{
+		"V":"son",
+		"ATR":"seres vivos"
+	}
+}
+
+5. Los pares son números naturales
+{
+	"Sujeto":{
+		"Det":["Los"],
+		"N":"pares"
+	},
+	"Predicado":{
+		"V":"son",
+		"ATR":"números naturales"
+	}
+}
+
+6. Los coches eléctricos son automóviles
+
+{
+	"Sujeto":{
+		"Det":["Los"],
+		"N":"coches".
+		"Adj":"eléctricos"
+	},
+	"Predicado":{
+		"V":"son",
+		"ATR":"automóviles"
+	}
+}
+
+7. Juan trabaja en Amazon
+{
+	"Sujeto":{
+		"N":"Juan"
+	},
+	"Predicado":{
+		"V":"trabaja",
+		"CCL":"en Amazon"
+	}
+}
+8. Pepe vive en Madrid
+
+{
+	"Sujeto":{
+		"N":"Pepe"
+	},
+	"Predicado":{
+		"V":"vive",
+		"CCL":"en Madrid"
+	}
+}
+
+9. La UPM se encuentra en Madrid
+{
+	"Sujeto":{
+		"Det":["La"],
+		"N":"UPM"
+	},
+	"Predicado":{
+		"V":"se encuentra",
+		"CCL":"en Madrid"
+	}
+}
+
+
+
+
+
+
+10
+{
+	“Sujeto”:{
+		“N”:”Pedro”
+	},
+	“Predicado”:{
+		“V”:”trabaja”,
+		“CCL”:{
+			“E”:”en”,
+			“TSN”:{
+				“N”:”Google”
+			}
+		}
+	}
+}
+
+
+
+{
+"Sujeto":{
+"Det":["Los"],
+"N":"pares"
+},
+"Predicado":{
+"V":"son",
+"ATR":{
+ "N":"números",
+ "Adj":"naturales"
+}
+}
+}
+
+
+
+ Juan vio un cuadro. 
+
+
+{
+	"Sujeto":{
+		"N":"Juan"
+	},
+	"Predicado":{
+		"V":"vio",
+		"CD":{
+			"SN":{
+				"Det":"un",
+				"N":"cuadro"
+			}
+		}
+	}
+}
+
+
+Juan vio a su madre.
+
+{
+	"Sujeto":{
+		"N":"Juan"
+	},
+	"Predicado":{
+		"V":"vio",
+		"CD":{
+			"SP":{
+				"E":"a",
+				"TSN":{
+					"Det":["su"],
+					"N":"madre"
+					}
+			}
+		}
+	}
+}
+
+//////////////////////////////////// Repositorio de inputs validos antiguos
+////1/////
+{
+	"Sujeto":{
+		"N":"Pepe"
+	},
+	"Predicado":{
+		"V":"compro",
+		"CD":"un coche",
+		"CI": ["a pepa"]
+	}
+}
+////2/////
+
+{
+ 	"Sujeto":{
+        "N":"Perro",
+        "Det":["El"],
+        "Adj":"Negro"
+    },
+    "Predicado":{
+        "V":"sale",
+        "CCL":"de casa  "  
+    }
+}
+
+////3/////
+{
+	"Sujeto":{
+		"N":"Ellos"
+	},
+	"Predicado":{
+		"CI":["le"],
+		"V":"comieron",
+		"CD":"la moral"
+	}
+}
+////4/////
+{
+	"Sujeto":{
+		"Det":["Los"],
+		"N":"niños"
+	},
+	"Predicado":{
+		"V":"se marcharon",
+		"CCL":"a la casa de pedro",
+		"CP":"muy contentos"
+	}
+}
+////5/////
+{
+	"Sujeto":{
+		"N":"Luis"
+	},
+	"Predicado":{
+		"V":"se lava",
+		"CD":"los dientes",
+		"CCT":["todos los dias"]
+	}
+}
+////6/////
+{
+	"Sujeto":{
+		"Det":["Un"],
+		"N":"hombre"
+	},
+	"Predicado":{
+		"V":"viaja",
+		"CP":"tranquilo",
+		"CCL":"en su coche"
+	}
+}
+////7/////
+{
+	"Sujeto":{
+		"Det":["El","otro"],
+		"N":"vehiculo"
+	},
+	"Predicado":{
+		"V":"venia",
+		"CCL":"hacia el",
+		"CCM":"peligrosamente"
+	}
+}
+////8/////
+{
+	"Sujeto":{
+		"N":"El"
+	},
+	"Predicado":{
+		"V":"escuchó",
+		"CP":"atento",
+		"CD":"las indicaciones",
+		"CCT":["antes del examen"]
+	}
+}
+////9/////
+
+al profesor le ha hustado mucho tu trabajo sobre volcanes
+
+{
+	"Sujeto":{
+		"Det":["Tu"],
+		"N":"trabajo",
+		"SP":"sobre volcanes"
+	},
+	"Predicado":{
+	"CI":["le","al profesor"],
+	"V":"ha gustado",
+	"CCC":"Mucho"
+	}
+}
+////10/////
+
+{
+	"Sujeto":{
+		"N":"Ella"
+	},
+	"Predicado":{
+		"CCT":["en su edad adulta"],
+		"V":"se volvio",
+		"CP":"mucho mas critica"
+	}
+}
+////11/////
+{
+	"Sujeto":{
+		"N":"Tu"
+	},
+	"Predicado":{
+		"V":"traele",
+		"CD":"el libro de sociales",
+		"CCL":"a casa",
+		"CCT":["mañana","por la tarde"]
+	}
+}
+////12/////
+////13/////
+
+pass
+4OriR@*IVK)Ro!PvY$im
